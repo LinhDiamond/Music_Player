@@ -1,0 +1,159 @@
+:root {
+    --text-white: #fff;
+    --text-black: #000;
+    --primary-color: #FF0066;
+    --color-background: rgb(235, 235, 235);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--color-background);
+}
+/* Base */
+.fw-600 {
+    font-weight: 600;
+}
+/* ================================================================= */
+/* Audio - Player */
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--text-white);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    min-height: 150px;
+    padding: 8px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.audio-player__title {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+.audio-player__namesong {
+    font-size: 1.6rem;
+    padding: 4px 0;
+    text-transform: capitalize;
+}
+.audio-player__imgsong {
+    width: 50%;
+    border-radius: 50%;
+    padding: 8px 0;
+}
+.audio-player__controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 8px 0;
+}
+.btn-toggle-play {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+.audio-player__controls--pause {
+    display: none;
+}
+.playing .audio-player__controls--pause {
+    display: block;
+}
+.playing .audio-player__controls--play {
+    display: none;
+}
+.btn-repeat.active ,
+.btn-random.active {
+    color: var(--primary-color);
+}
+.audio-player__line {
+    width: 100%;
+    height: 5px;
+    background-color: #d3d3d3;
+    margin: 8px 0;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    opacity: 0.7;
+    -webkit-appearance: none;
+}
+.audio-player__line:hover {
+    opacity: 1;
+}
+/* Để chỉnh nút seeking */
+.audio-player__line::-webkit-slider-thumb {
+    appearance: none;
+    width: 5%;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* List songs */
+.list-song {
+    padding: 16px 20px;
+    margin-top: 332px;
+}
+.list-song__item {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-white);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 8px 0;
+    
+}
+.list-song__item:active {
+    opacity: 0.8;
+}
+.list-song__item:first-child {
+    margin-top: 0;
+}
+.list-song__item:last-child {
+    margin-bottom: 0;
+}
+
+.list-song__item.active {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+.list-song__item.active span {
+    color: var(--text-white);
+    opacity: 0.9;
+}
+.list-song__item.active h2 {
+    font-weight: 400;
+}
+
+.song__item-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.song-item__info {
+    flex: 1;
+    text-transform: capitalize;
+}
+.song-item__info--singer {
+    display: block;
+    padding-top: 4px;
+    font-size: 1.2rem;
+    color: rgb(126, 126, 126);
+}
+.song-item__option {
+    font-size: 1.8rem;
+}

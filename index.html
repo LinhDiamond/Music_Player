@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" href="./img/favicon_2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="audio-player ">
+        <span class="audio-player__title fw-600">Now playing:</span>
+        <h2 class="audio-player__namesong">Chúc bạn nghe nhạc vui vẻ</h2>
+        <img class="audio-player__imgsong" src="./img/song1.jpg" alt="Bài hát được chọn">
+        <div class="audio-player__controls">
+            <div class="btn-repeat">
+                <i class="fa-solid fa-arrow-rotate-right"></i>
+            </div>
+            <div class="btn-prev">
+                <i class="fa-solid fa-backward-step"></i>
+            </div>
+            <div class="btn-toggle-play">
+                <i class="audio-player__controls--play fa-solid fa-circle-play"></i>
+                <i class="audio-player__controls--pause fa-solid fa-circle-pause"></i>
+            </div>
+            <div class="btn-next">
+                <i class="fa-solid fa-forward-step"></i>
+            </div>
+            <div class="btn-random">
+                <i class="fa-solid fa-shuffle"></i>
+            </div>
+        </div>
+        <input id="progress" class="audio-player__line" type="range" value="0" step="1" min="0" max="100">
+        <audio id="audio" src=""></audio>
+    </div>
+
+    <div class="list-song">
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
